@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 50px;
+            margin-top: 50px;
+        }
+
+        .center {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>استغفار</h1>
+    
+    <div border="1" style="width: 300px; margin: 0 auto; padding: 30px; background-color: #fff; border-radius: 10px;">
+    <button id="restButton">اعادة</button>
+    <button id="counterButton">استغفر الله</button>
+        
+        
+    
+    
+    <p>العدد: <span id="counter">0</span></p><br>
+    <a href="index.html">
+        <button>القائمة الرئيسىة</button>
+      </a>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let count = 0;
+            const counterButton = document.getElementById('counterButton');
+            const counterDisplay = document.getElementById('counter');
+            const resetButton = document.getElementById('restButton');
+
+            counterButton.addEventListener('click', () => {
+                count++;
+                counterDisplay.textContent = count;
+            });
+
+            resetButton.addEventListener('click', () => {
+                count = 0;
+                counterDisplay.textContent = count;
+            });
+        });
+    </script>
+</body>
+</html>
